@@ -15,8 +15,8 @@
  var applesPrice = 350;
  var orangesPrice = 350;
  var totalPrice = applesPrice + orangesPrice;
- var returnMoney = givenTk - totalPrice;
- console.log(returnMoney);
+ var getbackMoney = givenTk - totalPrice;
+ console.log(getbackMoney);
 
 
 
@@ -34,16 +34,16 @@ Sample Input:
 Output:
 71.04
 */
-var mathematics = 75.25;
-var Biology = 65;
-var Chemistry = 80;
-var Physics = 35.45;
-var Bangla = 99.50;
+var mathematicsMarks = 75.25;
+var biologyMarks = 65;
+var chemistryMarks = 80;
+var physicsMarks = 35.45;
+var banglaMarks = 99.50;
 
-var totalNumber = mathematics + Biology + Chemistry + Physics + Bangla;
-var averageNumber = totalNumber / 5 ;
-averageNumber = averageNumber.toFixed(2);
-console.log(averageNumber);
+var totalMarks = mathematicsMarks + biologyMarks + chemistryMarks + physicsMarks + banglaMarks;
+var averageMarks = totalMarks / 5 ;
+var averageTwoDecimal = averageMarks.toFixed(2);
+console.log(averageTwoDecimal);
 
 
 

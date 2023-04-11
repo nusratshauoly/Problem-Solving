@@ -105,7 +105,7 @@ while(roastGiven < 10){
     }
 }
 
-// example1: pen e debag korar shomoy break korbe means pen show korbena.
+// example1: pen e debug korar shomoy break korbe means pen show korbena.
 var items = ["bottle", "mouse", "pen"];
 for(var i = 0; i < items.length; i++){
     var item = items[i];
@@ -125,7 +125,6 @@ for(var i = 0; i < numbers.length; i++){ //array te jokhon 170 ashbe tokhon e br
     }
     console.log(number);
 }
-
 
 // example 3 : continue statement/50 er cheye boro output gulo skip korbe ba loop continue korbe output e dekhabe na
 var numbers = [45, 87, 89, 56, 32, 170, 51, 25, 51, 32];
@@ -163,7 +162,6 @@ for(var i = 10; i >= 1; i--){
     console.log(i);
 }
 
-
 // practice problem 1
 /* প্রাকটিস চ্যালেঞ্জ-১
 
@@ -181,12 +179,11 @@ for(var i = 10; i >= 1; i--){
 
 এখন তোমার কাজ হচ্ছে একটা for লুপ 5 বার চালিয়ে উপরের জিনিসগুলা আউটপুট হিসেবে দেখানো। */
 
-
-
-
-
-
-
+let works = ["রাত ৮ টা বাজে মডিউল আনলক করো ", "ফটাফট ভিডিও দেখে দেখে প্রাকটিস করো", "ভিডিও দেখতে দেখতে নোটস নাও", "মডিউল শেষ হলে পুরা মডিউল নিজে নিজে প্রাকটিস করো", "কোন কিছু বুঝতে না পারলে (চিন্তা করে দেখো এইখানে কিন্তু একটা শর্ত আছে ), সাপোর্ট সেশনে জয়েন করো"];
+for(let i = 1; i <= works.length; i++){
+    let work = works[i];
+    console.log(work);
+}
 
 // practice problem 2
 /*
@@ -195,10 +192,16 @@ for(var i = 10; i >= 1; i--){
 আবার একই জিনিস while লুপ চালিয়ে দেখানো। 
 */
 
-
-
-
-
+let works1 = 1;
+while(works1 <= 5){
+//   console.log(works1);
+  console.log("রাত ৮ টা বাজে মডিউল আনলক করো ");
+  console.log("ফটাফট ভিডিও দেখে দেখে প্রাকটিস করো");
+  console.log("ভিডিও দেখতে দেখতে নোটস নাও");
+  console.log("মডিউল শেষ হলে পুরা মডিউল নিজে নিজে প্রাকটিস করো");
+  console.log("কোন কিছু বুঝতে না পারলে (চিন্তা করে দেখো এইখানে কিন্তু একটা শর্ত আছে ), সাপোর্ট সেশনে জয়েন করো");
+  works1++;
+}
 
 // practice problem 3
 /*
@@ -207,11 +210,15 @@ for(var i = 10; i >= 1; i--){
 উপরের প্রব্লেমটাই while লুপ রিভার্স ওয়েতে (decremental হিসেবে)করে দেখাও 
 */
 
-
-
-
-
-
+let works2 = 5;
+while(works2 >= 1){
+    console.log("কোন কিছু বুঝতে না পারলে (চিন্তা করে দেখো এইখানে কিন্তু একটা শর্ত আছে ), সাপোর্ট সেশনে জয়েন করো");
+    console.log("মডিউল শেষ হলে পুরা মডিউল নিজে নিজে প্রাকটিস করো");
+    console.log("ভিডিও দেখতে দেখতে নোটস নাও");
+    console.log("ফটাফট ভিডিও দেখে দেখে প্রাকটিস করো");
+    console.log("রাত ৮ টা বাজে মডিউল আনলক করো ");
+    works2--;
+}
 
 // practice problem 4
 /*
@@ -219,3 +226,11 @@ for(var i = 10; i >= 1; i--){
 
 উপরের প্রব্লেমটাই for লুপ রিভার্স ওয়েতে (decremental হিসেবে)করে দেখাও 
 */
+
+for(let i = 5; i >= 1; i--){
+    console.log("কোন কিছু বুঝতে না পারলে (চিন্তা করে দেখো এইখানে কিন্তু একটা শর্ত আছে ), সাপোর্ট সেশনে জয়েন করো");
+    console.log("মডিউল শেষ হলে পুরা মডিউল নিজে নিজে প্রাকটিস করো");
+    console.log("ভিডিও দেখতে দেখতে নোটস নাও");
+    console.log("ফটাফট ভিডিও দেখে দেখে প্রাকটিস করো");
+    console.log("রাত ৮ টা বাজে মডিউল আনলক করো ");
+}

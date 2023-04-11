@@ -40,10 +40,10 @@ var score = 85;
 // var johnTotalScore = 40;
 
 if(score >= 80){
-    console.log("I got A grade");
+    console.log("A grade");
 }
 else if(score >= 60){
-    console.log("Tom got B grade");
+    console.log("B grade");
 }
 else if(score >= 50){
         console.log("C grade");

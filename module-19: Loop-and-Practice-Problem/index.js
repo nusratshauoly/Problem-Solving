@@ -124,7 +124,7 @@ for(var i = 0; i < numbers.length; i++){ //array te jokhon 170 ashbe tokhon e br
       break;
     }
     console.log(number);
-}
+
 
 // example 3 : continue statement/50 er cheye boro output gulo skip korbe ba loop continue korbe output e dekhabe na
 var numbers = [45, 87, 89, 56, 32, 170, 51, 25, 51, 32];
@@ -234,3 +234,6 @@ for(let i = 5; i >= 1; i--){
     console.log("ফটাফট ভিডিও দেখে দেখে প্রাকটিস করো");
     console.log("রাত ৮ টা বাজে মডিউল আনলক করো ");
 }
+
+
+

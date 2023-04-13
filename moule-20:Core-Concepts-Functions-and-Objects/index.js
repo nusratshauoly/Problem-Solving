@@ -41,4 +41,57 @@ const pizza = {
 }
 এবং pepperoni প্রিন্ট করবা।
 */
-;
+
+
+
+// practice problem 6
+/* 1. write a function called foo() which prints "foo" and a function called bar() which prints "bar". Call function bar() in the foo() function after printing. What will be the output? Now call the foo() to see the output.
+*/
+
+
+
+
+
+
+
+
+
+
+
+// practice problem 7
+/* Write a function called make_avg() which will take an three integers and return the average of those values.
+*/
+// foo name function korbo and console .log korbo foo ke. arekta function nibo bar, foo er moddhe jokhon console.log likhbo tar niche bar function call kore dibo. then foo function baire jeye foo function take call kore dibo
+
+
+
+
+
+
+
+// practice problem 8
+
+/* Challenging: write a function called make_avg() which will take an array of integers and the size of that array and return the average of those values.
+*/
+// array er vitorer value gulor average kivabe ber kore
+// javascript make array average of an elements
+
+
+
+// practice problem 9:
+
+/* write a function called odd_even() which takes an integer value and tells/return value whether this value is even or odd. you need to do it in 4 ways:
+__has return + has parameter
+__ no return + has parameter
+*/
+
+
+
+
+
+
+// practice problem 10:
+/*  you are in a hurry to go to your school on time. But when you are crossing the road, the traffic signal is (red) coloured. In this situation, if you try to cross the road, you may be in danger. If you notice a (yellow) colored traffic signal, you should stop. If you notice a (green) colored traffic signal, you should cross the road. So write a JS code, where there is a variable called (signal). Its value van be (green, yellow or red & we will get different activities as output depending on the variable). So, hurry up.
+*/
+
+//solve this using if.. else / switch

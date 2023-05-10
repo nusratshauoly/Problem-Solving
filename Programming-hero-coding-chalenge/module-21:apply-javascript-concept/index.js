@@ -224,5 +224,104 @@ console.log('odd number sum', oddNumberSum);
 //////////////////////////////////////////
 
 //10. Calculate Factorial of a number using for loop:
-
+// adding 1 to 7 numbers: 1 + 2 + 3 + 4 + 5 + 6 + 7
 let sum = 0;
+for(let i = 1; i <= 7; i++){
+    sum = sum + i;
+    console.log(i, sum);
+}
+//  using function
+function sumOfNumbers(number){
+    // addition er shomoy initial value always 0 rakhbo.
+    let sum = 0;
+    for(let i = 1; i <= number; i++){
+       sum = sum + i;
+       console.log(i, sum);
+    }
+    return sum;
+}
+
+// multiplication of numbers
+
+function multiplicationOfNumbers(number){
+    // multiplication er shomoy initial value always 1 rakhbo
+   let result = 1;
+   for(i = 1; i <= number; i++){
+      result = result * i;
+    }
+    return result;
+}
+const result = multiplicationOfNumbers(7);
+console.log(result);
+
+///////factorial: A factorial is a function that multiplies a number by every number below it till 1.
+
+//3! = 3 * 2 * 1 / 3 * 2! / 3 * (3 - 1)!.
+
+// factorial formula: n! = n * (n - 1)!.
+
+function factorial(number){
+   let result = 1;
+   for(let i = number; i >= 1; i--){
+      result = result * i;
+      console.log(i);
+   }
+   return result;
+}
+const number = 5;
+const fact = factorial(number);
+console.log('factorial of:',number, fact);
+
+
+//////////////////////////////
+
+// 11. Calculate Factorial of a number using while loop:
+
+function factorial(number){
+   let i = 1;
+   let result = 1;
+   while(i <= 7){
+        result = result * i;
+        i++;
+   }
+   return result;
+}
+
+// factorial while in a reverse way
+function factorial(number){
+   let i = number;
+   let result = 1;
+   while(i >= 1){
+       result = result * i;
+       i--;
+    }
+    return result;
+}
+const output = factorial(7);
+console.log(output);
+
+///////////////////////////////
+
+/*
+12. write a function that will take hour as the input parameter and will convert it into minutes and will return the result in minutes. / convert minute to second.
+*/
+
+
+
+
+
+
+
+
+
+
+/* 13. write a function findLeapYear() that will take the array [2023, 2024, 2025, 2028, 2030] as the input parameter and will check if each year is a leap year. If a year is a leap year 
+insert that year in a new array, return the new array and print the result. (odd number ber system er moto)
+*/
+
+
+
+
+
+/* 14. Write a function findOddSum() that will take the array [5, 7, 8, 45, 30] as the input parameter and will return the sum of the odd numbers.
+*/

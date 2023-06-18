@@ -3,7 +3,22 @@
 */
 
 
+function minInArray(numbers) {
+    let lowest = numbers[0];
 
+    for (let i = 0; i < numbers.length; i++){
+        
+        const element = numbers[i];
+        
+        if (element < lowest) {
+            lowest = element;
+        }
+    }
+    return lowest;
+}
+const heights = [167, 190, 120, 165, 137];
+const shortest = minInArray(heights)
+console.log('lowest number is: ', shortest);
 
 
 /////////////////////////////////////////////////////////
@@ -12,31 +27,64 @@
 2. একটা কোড লিখো যেটা দিয়ে তিনটা সংখ্যার মধ্যে সবচেয়ে ছোট সংখ্যা বের করে দিবে। 
 */
 
-
+function minNumber(num1, num2, num3) {
+    const minimum = Math.min(num1, num2, num3);
+    return minimum;
+}
+const minimumNumber = minNumber(34, 64, 9);
+console.log(minimumNumber);
 
 
 /////////////////////////////////////////////////////////
 
 // 3. একটা ফাংশন লিখো। সেই ফাংশনের মধ্যে ইনপুট হিসেবে একটা array নিবে। সেই array এর মধ্যে অনেকগুলা সংখ্যা থাকবে। তোমার কাজ হবে ইনপুট নেয়া array এর মধ্যে যতগুলা সংখ্যা আছে। সেই সংখ্যা গুলার গড় বের করবে। তারপর সেই গড় ফাংশনের রিটার্ন হিসেবে দিয়ে দিবে। একটু চিন্তা করো। বুঝার চেষ্টা করো। ট্রাই করো। দেখো পারো কিনা। 
 
+// Write a function. The function will take an array as input. That array will contain many numbers. Your task will be to input as many numbers as there are in the array. Find the average of those numbers. Then return that average function. think a little try to understand try it see if you can
 
-
+function average(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        sum = sum + arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(average([1, 2, 3, 4, 5]));
 
 
 /////////////////////////////////////////////////////////
 
 // 4. একটা ফাংশন লিখো। যেটা ইনপুট প্যারামিটার হিসেবে একটা আয়তক্ষেত্রের দৈর্ঘ্য আর উচ্চতাকে নিবে। তারপর সেই আয়তক্ষেত্র এর area (আয়তন) কে রেজাল্ট হিসেবে রিটার্ন করবে। 
+// Write a function. which will take the length and height of a rectangle as input parameters. Then return the area of that rectangle as the result.
 
-
-
+function rectangle(length, height) {
+    let area = length * height;
+    return area;
+}
+let rectangleValues = rectangle(8, 6);
+console.log('area of triangle', ractangleValues);
 
 
 /////////////////////////////////////////////////////////
 
 //5. (ট্রিকি) কোন একটা array এর মধ্যে অনেকগুলা সংখ্যা আছে। সেই সংখ্যাগুলো থেকে second largest সংখ্যা বের করার একটা প্রোগ্রাম লিখো। দরকার হলে গুগলে সার্চ দাও। তারপর সার্চ রেজাল্ট দেখে বুঝে বুঝে করার চেষ্টা করো। 
+//An array contains many numbers. Write a program to find the second largest number from those numbers. Search Google if necessary. Then look at the search results and try to understand.
 
+function secondLargest(arr) {
+    let max1st = arr[0];
+    let max2nd = 0;
 
-
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > max1st) {
+            max2nd = max1st;
+            max1st = arr[i];
+        }
+        else if (arr[i] > max2nd && arr[i] != max1st) {
+            max2nd = arr[i];
+        }
+    }
+    return max2nd;
+}
+console.log(secondLargest([100,2,4,54,27,98,99]));
 
 
 
@@ -135,29 +183,57 @@ Math.min(69 97 99);
 
 //**** */ Homework1: write a function that will take 3 numbers will return the max number.
 
+function maxNumber(num1, num2, num3) {
+    const maximum = Math.max(num1, num2, num3);
+    return maximum;
+}
+const maximumNumber = maxNumber(84, 69, 99);
+console.log(maximumNumber);
 
 
+// using if - else
+const num1 = 84;
+const num2 = 75;
+const num3 = 77;
 
-
-
-
-
-
-
-
-
+if (num1 > num2 && num1 > num3) {
+    console.log(`${num1} is greater`);
+}
+else if (num2 > num1 && num2 > num3) {
+    console.log(`${num2} is greater`);
+}
+else {
+    console.log(`${num3} is greater`);
+}
 
 
 //***** */ Homework2: write a function that will take 3 parameters and will return the min number.
 // first time do it using if-else
 //  second time do it using Math.min or Math.max
 
+function minNumber(num1, num2, num3) {
+    const minimum = Math.min(num1, num2, num3);
+    return minimum;
+}
+const minimumNumber = minNumber(34, 64, 9);
+console.log(minimumNumber);
 
 
 
+// using if-else
+const num1 = 84;
+const num2 = 75;
+const num3 = 77;
 
-
-
+if (num1 < num2 && num1 < num3) {
+    console.log(`${num1} is smaller`);
+}
+else if (num2 < num1 && num2 < num3) {
+    console.log(`${num2} is smaller`);
+}
+else {
+    console.log(`${num3} is smaller`);
+}
 
 
 
@@ -213,7 +289,7 @@ function maxInArray(numbers){
     for(let i = 0; i < numbers.length; i++){
        const index = i;
        const element = numbers[index];
-       console.log(element);
+      
        if(element > largest){
          largest = element;
      } 
@@ -231,7 +307,22 @@ function maxInArray(numbers){
 
  //***** */ HomeWork1: wrie a function to get the lowest number in ana array.
 
+function minInArray(numbers) {
+    let lowest = numbers[0];
 
+    for (let i = 0; i < numbers.length; i++){
+        
+        const element = numbers[i];
+        
+        if (element < lowest) {
+            lowest = element;
+        }
+    }
+    return lowest;
+}
+const heights = [167, 190, 120, 165, 137];
+const shortest = minInArray(heights)
+console.log('shortest number is: ', shortest);
 
 
 
@@ -329,7 +420,7 @@ const reversed = result.join(' ');
 return reversed; 
 }
 const myString = 'I am a good boy';
-reverseWords(myString);
+console.log(reverseWords(myString));
 
 
 

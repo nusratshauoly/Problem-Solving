@@ -5,13 +5,13 @@
 */
 
 
-function inchToFeet(inches){
-   const feet = inches / 12;
-   return feet;
+function feetToInch(feet){
+   const inch = feet * 12;
+   return inch;
 }
-const dadaInches = 144;
-const dadaFeet = inchToFeet(dadaInches);
-console.log(dadaFeet);
+const dataFeet = 10;
+const dataFeets = feetToInch(dataFeet);
+console.log(dataFeets);
 
 
 

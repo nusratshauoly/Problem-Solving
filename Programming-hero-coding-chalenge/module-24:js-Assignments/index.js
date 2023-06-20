@@ -1,5 +1,5 @@
 /*
-First Problem 
+1. First Problem 
 
 * funtion name (mindGame) dibo
 
@@ -11,7 +11,7 @@ First Problem
 5. then shudhu jei number ta ashbe oitai shudhu return korbo (extra kono kichu likhbo na)
 
 
-Problem 1: Let’s play a mind game
+1. Problem 1: Let’s play a mind game
 তোমাকে একটা function দেওয়া হবে called mindGame(” যা ইনপুট হিসেবে একটা positive number নিবে।")
 এখন তোমার task : তোমাকে সেই নাম্বার এর সাথে 3 গুন করে, তারপর 10 যোগ করে, তারপর 2 দিয়ে ভাগ করে, তারপর 5 বিয়োগ করে, যা আউটপুট আসবে তা return করতে হবে
 Sample Input & Output
@@ -77,7 +77,73 @@ Therefore, the output for the input number 5 is 7.5. Similarly, the function cal
 ////////////////////////////////////////
 
 /*
-Second Problem
+1.5 : You will be given a function called mindGame("which will take a positive number as input.")
+Now your task: You have to multiply that number by 3, then add 10, then divide by 2, then subtract 5, and return the output. in javascript and take input value from user
+Sample Input & Output
+Input: 5
+Output: 7.5
+Input: 50
+Output: 75
+Input: 33
+Output: 49.5
+
+*/
+
+function mindGame(number) {
+  let result = ((number * 3) + 10) / 2 - 5;
+  return result;
+}
+
+// Prompt the user for input
+let userInput = prompt("Enter a positive number:");
+
+// Convert the user input to a number
+let number = parseFloat(userInput);
+
+// Call the mindGame function with the user input and display the result
+let output = mindGame(number);
+console.log(output);
+
+
+/*Certainly! Let's go through the code step by step:
+
+We define the mindGame function that takes a parameter number.
+javascript
+
+
+function mindGame(number) {
+
+Inside the function, we perform the specified mathematical operations on the number parameter according to the given formula: multiply by 3, add 10, divide by 2, and subtract 5. We store the result in a variable called result.
+
+  let result = ((number * 3) + 10) / 2 - 5;
+
+We return the calculated result from the function.
+
+  return result;
+}
+
+Next, we prompt the user to enter a positive number using the prompt function. The entered value is stored in the userInput variable.
+
+let userInput = prompt("Enter a positive number:");
+
+We convert the userInput to a number using the parseFloat function. This ensures that the input is treated as a numeric value.
+
+let number = parseFloat(userInput);
+
+We call the mindGame function with the number obtained from the user input and store the returned result in the output variable.
+
+let output = mindGame(number);
+
+Finally, we display the output using console.log to show the calculated result.
+
+console.log(output);
+
+By running this code, the program will prompt the user to enter a positive number, perform the specified operations on it using the mindGame function, and display the resulting value.
+
+
+
+/*
+2. Second Problem
 
 *funtion name (evenOdd) dibo
 
@@ -138,10 +204,77 @@ For example, when the input string is 'Phero', the length of the string is 5. Si
 */
 
 
-//////////////////////////////////////////////
+2.5 : second problem take input from user
+
+function evenOdd(inputString) {
+  let length = inputString.length;
+  if (length % 2 === 0) {
+    return 'even';
+  } else {
+    return 'odd';
+  }
+}
+
+// Prompt the user for input
+let userInput = prompt("Enter a string:");
+
+// Call the evenOdd function with the user input and display the result
+let output = evenOdd(userInput);
+console.log(output);
+
 
 /*
-Third Problem
+explanation:
+
+Let's go through the code step by step:
+
+We define the evenOdd function that takes a parameter inputString.
+
+  function evenOdd(inputString) {
+
+Inside the function, we obtain the length of the inputString using the length property and store it in the variable length.
+
+  let length = inputString.length;
+
+We check if the length is divisible by 2 by using the modulus operator (%). If the remainder is 0, it means the length is even, and we return the string 'even'.
+
+      if (length % 2 === 0) {
+    return 'even';
+  }
+
+If the length is not divisible by 2 (i.e., the remainder is not 0), it means the length is odd, and we return the string 'odd'.
+
+    else {
+    return 'odd';
+  }
+}
+
+Next, we prompt the user to enter a string using the prompt function. The entered value is stored in the userInput variable.
+
+  let userInput = prompt("Enter a string:");
+
+We call the evenOdd function with the userInput and store the returned result in the output variable.
+
+  let output = evenOdd(userInput);
+
+  Finally, we display the output using console.log to show whether the total number of characters in the input string is even or odd.
+
+   console.log(output);
+ 
+By running this code, the program will prompt the user to enter a string, determine whether the total number of characters is even or odd using the evenOdd function, and display the result.
+
+//////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+/*
+3. Third Problem
 
 *function name (isLGSeven) dibo
 
@@ -204,10 +337,88 @@ So, in the example usage, the output for the input number 6 is -1, which is the 
 
 
 
+
+
+
+/*
+3.5: You will be given a function called “isLGSeven()”. It will take a number as input.
+Now your task: you have to find the difference between the input value and 7. If this difference is smaller than 7, you must return the subtraction. Otherwise you must return double of the input. Means twice the number you took as input . in javascript and take input from user
+
+Input : 6
+Output: -1 
+
+*/
+
+function isLGSeven(number) {
+  let difference = number - 7;
+  
+  if (difference < 7) {
+    return difference;
+  } else {
+    return number * 2;
+  }
+}
+
+// Prompt the user for input
+let userInput = prompt("Enter a number:");
+
+// Convert the user input to a number
+let number = parseFloat(userInput);
+
+// Call the isLGSeven function with the user input and display the result
+let output = isLGSeven(number);
+console.log(output);
+
+
+/*
+Explain:
+
+Let's go through the code step by step:
+
+We define the isLGSeven function that takes a parameter number.
+
+  function isLGSeven(number) {
+
+Inside the function, we calculate the difference between the number and 7 and store it in the variable difference.
+
+  let difference = number - 7;
+
+We check if the difference is smaller than 7. If it is, we return the difference as the output.
+
+    if (difference < 7) {
+    return difference;
+  }
+
+If the difference is not smaller than 7, we return double the number as the output by multiplying it by 2.
+
+    else {
+    return number * 2;
+  }
+}
+
+Next, we prompt the user to enter a number using the prompt function. The entered value is stored in the userInput variable.
+
+  let userInput = prompt("Enter a number:");
+
+We convert the userInput to a number using the parseFloat function. This ensures that the input is treated as a numeric value.
+
+  let number = parseFloat(userInput);
+
+We call the isLGSeven function with the number obtained from the user input and store the returned result in the output variable.
+
+ let output = isLGSeven(number);
+
+Finally, we display the output using console.log to show the calculated result.
+
+  console.log(output);
+
+By running this code, the program will prompt the user to enter a number, perform the calculations based on the conditions specified in the isLGSeven function, and display the resulting value.
+*/
+
 ////////////////////////////////////////////
 
 /*
-Fourth Problem
+4. Fourth Problem
 
 *function name (findingBadData) dibo
 
@@ -297,12 +508,97 @@ The same process applies to the other example input arrays, where the function c
 */
 
 
+/* 4.5: You will be given a function called findingBadData(). It will take an array as input. Any number of numbers will be in the array. Numbers can be negative numbers (less than zero) and positive numbers (greater than or equal to zero). If any number is negative we will call it "Bad Data". If a number is positive, we will call it "Good Data".
+Now you have to find out how many bad data are there in your task: array and return that number. in javascript and take input from users
+
+Sample Input & Output:-
+Input: [ 1,2,5 ]
+Output: 0
+Input: [ 2, -5, -7, -13 ]
+Output: 3
+Input: [ -4, -9, -5, -33, -55 ]
+Output: 5
+*/
+
+function findingBadData(arr) {
+  let count = 0;
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      count++;
+    }
+  }
+  
+  return count;
+}
+
+// Prompt the user for input
+let userInput = prompt("Enter numbers separated by commas:");
+
+// Convert the user input to an array
+let arr = userInput.split(",").map(Number);
+
+// Call the findingBadData function with the user input array and display the result
+let output = findingBadData(arr);
+console.log(output);
+
+
+/*
+Explain:
+
+Let's go through the code step by step:
+
+We define the findingBadData function that takes a parameter arr, which represents the input array.
+
+  function findingBadData(arr) {
+
+Inside the function, we initialize a variable count to keep track of the number of negative numbers (bad data) encountered. We set it to 0 initially.
+
+  let count = 0;
+ 
+We iterate over each element of the arr using a for loop and check if the current element is less than 0 (negative). If it is, we increment the count variable.
+
+      for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      count++;
+    }
+  }
+
+After iterating through all the elements of the array, we return the final count as the output, representing the number of bad data (negative numbers) in the array.
+
+    return count;
+}
+
+Next, we prompt the user to enter numbers separated by commas using the prompt function. The entered value is stored in the userInput variable.
+
+  let userInput = prompt("Enter numbers separated by commas:");
+
+We convert the userInput string to an array by splitting it at each comma using the split function. Then, we map each element to its numeric representation using the map function and store the resulting array in the arr variable.
+
+  let arr = userInput.split(",").map(Number);
+
+We call the findingBadData function with the arr obtained from the user input and store the returned result in the output variable.
+
+  let output = findingBadData(arr);
+
+Finally, we display the output using console.log to show the number of bad data (negative numbers) in the input array.
+
+  console.log(output);
+
+By running this code, the program will prompt the user to enter numbers separated by commas, count the number of negative numbers (bad data) in the input array using the findingBadData function, and display the resulting count.
+
+*/
+
+
+
+
+
 
 
 ///////////////////////////////////////////////
 
 /*
-Fifth Problem
+5. Fifth Problem
 
 *function name (gemsToDiamond) dibo
 
@@ -424,3 +720,249 @@ shegulote number deya lagbe and jodi number bade onno kono string dei tahole if 
 -----> how to submit: assignment korar jonno kono private repository lagbe na, kono github link or live website link submit korte hobena
 ------> start assignment e jeye vs code er 1 file ei 5 ta problem solve korbo and description gulo likhbo, then all select kore copy paste korbo start assignment er oikhane then submit kore dibo.
 ------>  
+
+
+/*
+
+5.5: You will be given a function called gemsToDiamond(). It will take three numbers (the number of gems of your 3 friends) as input.
+Power of gems per 1st friend = 21
+Power of gems per 2nd friend = 32
+Power of gems per 3rd friend = 43
+[Gems capacity means how many diamonds a gem can be converted into. ]
+
+Now your task: you have to figure out how many diamonds you will get in total by combining the gems of all your friends. If the number of total diamond is over 1000, then you will get as many diamonds as are left by subtracting 2000 from the total diamond in javascript and take input from user
+
+Sample Input & Output:-
+Input: 1, 1, 1
+Output: 96
+Input: 20, 200, 50
+Output: 6970
+Input: 100, 5, 1
+Output: 303
+*/
+
+function gemsToDiamond(gems1, gems2, gems3) {
+  const power1 = 21;
+  const power2 = 32;
+  const power3 = 43;
+
+  let diamonds = (gems1 * power1) + (gems2 * power2) + (gems3 * power3);
+
+  if (diamonds > 1000) {
+    diamonds -= 2000;
+  }
+
+  return diamonds;
+}
+
+// Prompt the user for input
+let userInput = prompt("Enter the number of gems for each friend separated by commas:");
+
+// Convert the user input to an array
+let gems = userInput.split(",").map(Number);
+
+// Call the gemsToDiamond function with the user input and display the result
+let output = gemsToDiamond(gems[0], gems[1], gems[2]);
+console.log(output);
+
+/*
+Explain: 
+
+We define the gemsToDiamond function that takes three parameters: gems1, gems2, and gems3, representing the number of gems for each friend.
+
+    function gemsToDiamond(gems1, gems2, gems3) {
+
+Inside the function, we define constants power1, power2, and power3 representing the power of gems per friend.
+
+  const power1 = 21;
+  const power2 = 32;
+  const power3 = 43;
+
+We calculate the total number of diamonds obtained by multiplying the number of gems for each friend by their respective power and summing them.
+
+    let diamonds = (gems1 * power1) + (gems2 * power2) + (gems3 * power3);
+
+If the total number of diamonds is greater than 1000, we subtract 2000 from it to get the number of diamonds left.
+
+    if (diamonds > 1000) {
+    diamonds -= 2000;
+  }
+
+We return the final diamonds count as the output.
+
+    return diamonds;
+}
+
+Next, we prompt the user to enter the number of gems for each friend, separated by commas, using the prompt function. The entered value is stored in the userInput variable.
+
+  let userInput = prompt("Enter the number of gems for each friend separated by commas:");
+
+We convert the userInput string to an array by splitting it at each comma using the split function. Then, we map each element to its numeric representation using the map function and store the resulting array in the gems variable.
+
+  let gems = userInput.split(",").map(Number);
+
+We call the gemsToDiamond function with the gems array obtained from the user input, and store the returned result in the output variable.
+
+  let output = gemsToDiamond(gems[0], gems[1], gems[2]);
+
+Finally, we display the output using console.log to show the total number of diamonds obtained.
+
+  console.log(output);
+
+By running this code, the program will prompt the user to enter the number of gems for each friend, calculate the total number of diamonds obtained using the gemsToDiamond function, and display the resulting count. If the total number of diamonds is over 1000, the program will subtract 2000 from the total count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+1. Problem 1: Let’s play a mind game
+তোমাকে একটা function দেওয়া হবে called mindGame(” যা ইনপুট হিসেবে একটা positive number নিবে।")
+এখন তোমার task : তোমাকে সেই নাম্বার এর সাথে 3 গুন করে, তারপর 10 যোগ করে, তারপর 2 দিয়ে ভাগ করে, তারপর 5 বিয়োগ করে, যা আউটপুট আসবে তা return করতে হবে
+Sample Input & Output
+Input: 5
+Output: 7.5
+Input: 50
+Output: 75
+Input: 33
+Output: 49.5
+*/
+
+function mindGame(number) {
+    let result = ((number * 3) + 10) / 2 - 5;
+    return result;  
+}
+console.log(mindGame(5));
+console.log(mindGame(50));
+console.log(mindGame(33));
+
+
+/////////////////////////////////////////////////////////////////////
+
+/*
+2. Problem 2: Finding even or odd
+তোমাকে একটা function দেওয়া হবে called evenOdd(). এটা ইনপুট হিসেবে একটা string নিবে। 
+এখন তোমার task: String এ total কয়টা character আছে তার উপর ভিত্তি করে আউটপুট দিতে হবে। আউটপুট হবে ‘even’ অথবা ‘odd’ ।Sample Input & Output:
+Input: ‘Phero’
+Output: odd
+Input: ‘Batch7’
+Output: even
+Input: ‘chatgpt’
+Output: odd
+*/
+function evenOdd(str) {
+    if (str % 2 === 0) {
+        return 'even';
+    }
+    else {
+        return 'odd';
+    }
+}
+console.log(evenOdd('Phero'));
+console.log(evenOdd('Batch7'));
+console.log(evenOdd('chatgpt'));
+
+
+////////////////////////////////////////////////////////////////////
+
+/*
+3. Problem 3: Is Less or Greater than seven
+তোমাকে একটা function দেওয়া হবে called “isLGSeven()”. এটা ইনপুট হিসেবে একটা number নিবে।  
+এখন তোমার task: তোমাকে ইনপুট ভ্যালু এবং ৭ এর মধ্যে পার্থক্য বের করতে হবে। যদি এই পার্থক্য ৭ এর চেয়ে ছোট হয়, তখন তোমাকে return করতে হবে সেই বিয়োগফল। নাহলে তোমাকে return করতে হবে double of the input। মানে যে সংখ্যা ইনপুট হিসেবে নিয়েছো সেটির দ্বিগুণ।
+Input : 6
+Output: -1
+Input: -15
+Output: -22
+Input: 15
+Output: 30
+*/
+
+function isLGSeven(number) {
+    const difference = number - 7;
+
+    if (difference < 7) {
+        return difference;
+    }
+    else {
+        return number * 2; 
+    }
+}
+console.log(isLGSeven(6));
+console.log(isLGSeven(-15));
+console.log(isLGSeven(15));
+
+
+////////////////////////////////////////////////////////////////////////
+
+/*
+4. Problem 4: Finding Bad data
+তোমাকে একটা function দেওয়া হবে called findingBadData(). এটা ইনপুট হিসেবে একটা array নিবে। array তে যেকোনো সংখ্যক কতগুলো number থাকবে। number গুলো negative number (less than zero) ও হতে পারে, আবার positive number (greater than or equal to zero) ও হতে পারে। কোনও number যদি negative হয় সেটাকে আমরা বলব “Bad Data”. কোনও number যদি positive হয় সেটাকে আমরা বলব “Good Data”. 
+এখন তোমার task: array তে কতগুলো Bad data আছে সেটা খুঁজে বের করতে হবে এবং সেই নাম্বার টা return করতে হবে।
+Sample Input & Output:-
+Input: [ 1,2,5 ]
+Output: 0
+Input: [ 2, -5, -7, -13 ]
+Output: 3
+Input: [ -4, -9, -5, -33, -55 ]
+*/
+
+function findingBadData(arr) {
+    let badDataCount = 0;
+
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] < 0) {
+            badDataCount++;
+        }
+    }
+    return badDataCount;
+}
+console.log(findingBadData([1, 2, 5]));
+console.log(findingBadData([2, -5, -7, -13]));
+console.log(findingBadData([-4, -9, -5, -33, -55]));
+
+////////////////////////////////////////////////////////////////////////
+
+/*
+5. Problem 5: Convert your gems into diamond
+তোমাকে একটা function দেওয়া হবে called gemsToDiamond(). এটা ইনপুট হিসেবে তিনটা number ( তোমাদের ৩ বন্ধুর gems এর সংখ্যা ) নিবে। 
+১ম বন্ধুর প্রতি gems এর ক্ষমতা = 21
+২য় বন্ধুর প্রতি gems এর ক্ষমতা = 32
+৩য় বন্ধুর প্রতি gems এর ক্ষমতা = 43
+[ gems এর ক্ষমতা বলতে একটা gems কে কয়টা diamond এ convert করা যাবে সেটা বুঝানো হচ্ছে। ]
+এখন তোমার task: সব বন্ধুর gems মিলিয়ে total কতটি diamond পাবে সেটা বের করতে হবে। total diamond এর সংখ্যা যদি 1000 এর দিগুন এর উপর হয়ে যায় সেক্ষেত্রে total diamond থেকে 2000 বাদ দিয়ে যতগুলো diamond অবশিষ্ট থাকবে, ততগুলো তোমরা পাবে।
+Sample Input & Output:-
+Input: 1, 1, 1
+Output: 96
+Input: 20, 200, 50
+Output: 6970
+Input: 100, 5, 1
+Output: 303
+*/
+
+function gemsToDiamond(gems1, gems2, gems3) {
+    const power1 = 21;
+    const power2 = 32;
+    const power3 = 43;
+
+    const totalDiamonds = (gems1 * power1) + (gems2 * power2) + (gems3 * power3);
+
+    if(totalDiamonds > 1000){
+        return totalDiamonds - 2000; 
+    }
+    else {
+        return totalDiamonds;
+    }
+}
+console.log(gemsToDiamond(1, 1, 1));
+console.log(gemsToDiamond(20, 200, 50));
+console.log(gemsToDiamond(100, 5, 1));

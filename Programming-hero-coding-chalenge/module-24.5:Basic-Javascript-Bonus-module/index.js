@@ -79,6 +79,7 @@ function factorial(i){
    return i * factorial(i - 1);
 }
 const result = factorial(5);
+console.log(result);
 
 /*
 1.
@@ -121,7 +122,7 @@ function sum(i){         //{here (i) is a parameter}
      if(i == 1){         // i == 1 is condition 
        return 1;
     }
-    return i + summ(i - 1);      // decrement
+    return i + sum(i - 1);      // decrement
 }
 const result = sum(5);
 console.log(result);

@@ -38,7 +38,7 @@ https://www.freecodecamp.org/news/javascript-tolowercase-how-to-convert-a-string
  */
 
 
-function lowercaseName(str) {
+function lowerCaseName(str) {
    
     return str.toLowerCase();
 }
@@ -90,7 +90,7 @@ const pizza = {
 console.log(pizza.toppings[2]);
 
 // position number of 'pepperoni';
-// console.log(pizza.toppings.indexOf('pepperoni'));
+ console.log(pizza.toppings.indexOf('pepperoni'));
 
 
 // 6. practice problem 6

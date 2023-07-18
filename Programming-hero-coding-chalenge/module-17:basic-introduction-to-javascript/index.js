@@ -86,3 +86,7 @@ var givenNumber = 119;
 var divideNumber = 5;
 var remainder = givenNumber % divideNumber;
 console.log(remainder);
+
+
+
+

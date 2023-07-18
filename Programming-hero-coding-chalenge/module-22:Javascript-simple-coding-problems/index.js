@@ -87,7 +87,7 @@ function secondLargest(arr) {
 console.log(secondLargest([100,2,4,54,27,98,99]));
 
 
-
+// module regular video lecture problem
 ////////////////////////////////////////////////////////
 
 /*

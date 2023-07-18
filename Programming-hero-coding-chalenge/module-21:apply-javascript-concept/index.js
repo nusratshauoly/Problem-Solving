@@ -16,7 +16,7 @@ console.log(`${hours} is equal to ${minutes} minutes`);
 
 
 /* 13. write a function findLeapYear() that will take the array [2023, 2024, 2025, 2028, 2030] as the input parameter and will check if each year is a leap year. If a year is a leap year 
-insert that year in a new array, return the new array and print the result. (odd number ber system er moto)
+insert that year in a new array, return the new array and print the result. (odd number system er moto)
 ১. leapYear() নামে ফাংশন লিখো এবং নেক্সট ইয়ার অর্থাৎ ২০২৩ কি leap year নাকি সেটা চেক করো। Leap year হলে ফাংশন true রিটার্ন করবে আর leap year না হলে false রিটার্ন করবে।
 */
 

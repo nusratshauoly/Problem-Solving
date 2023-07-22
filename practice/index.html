@@ -6,38 +6,39 @@
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
         <style>
-          
+            ul{
+                color: coral;
+            }
         </style>
     </head>
     <body>
-        <!-- ------------------------- 26.1 --------------------- -->
-        <h1 onclick="console.log('i am clicked')">DOM er ajke birthay</h1>
-        <button title="this is a tooltip" onclick="console.log(7)">click me</button>
-        <button onclick="console.log(65)">another button</button>
+        <header>
+            <h1>Welcome to my DOM</h1>
+        </header>
 
-        <!-- --------------------------- 26.2 ------------------------------- -->
-
-        <!-- option 1 -->
-        <button onclick="document.body.style.backgroundColor='yellow'">Make
-            yellow</button>
-
-        <!-- option 2 -->
-        <button onclick=makeRed()>make red</button>
-
-        <!-- option 3 (with id) -->
-        <button id="make-blue">make blue</button>
-
-        <!-- option 3.5 -->
-        <button id="make-purple">purple button</button>
-
-        <!-- external js add function -->
-
+        <main>
+            <h1>My awesome DOM</h1>
+            <ul>
+                <li>Jalali set</li>
+                <li>bonobash</li>
+            </ul>
+        </main>
+        <!-- external js -->
         <script src="index.js"></script>
 
-        <!-- internal js -->
-        <script>
-           
-          
-        </script>
+        <!-- enternal js -->
+        <!-- <script>
+            console.log("adding js inside the html");
+
+            const student = {
+                name: 'Abul',
+                ID: 11,
+                study : function(time){
+                    console.log(time, 'study kortese');
+                }
+            }
+            console.log(4);;
+            console.log('adding a js inside html file');        
+        </script> -->
     </body>
 </html>

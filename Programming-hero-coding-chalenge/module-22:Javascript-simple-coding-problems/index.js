@@ -424,7 +424,7 @@ console.log(reverseWords(myString));
 
 
 
-/////////////////////////////////////
+/////////////////////////////////////-----------------------------------------------------
 
 // Module- 22-9: (advanced) create a fibonacci series using a for loop:
 
@@ -460,3 +460,188 @@ for(let i = 2; i <= 10; i++){
     fibo[i] = fibo[i - 1] + fibo[i - 2];
 }
 console.log(fibo);
+
+// ----------------------------------------------------------------------------------------------------------
+
+// Problem : For a given array with marks of students => [85, 97, 44, 37, 76, 60]. Find the average marks of the entire class.
+
+let marks = [85, 97, 44, 37, 76, 60];
+let sum = 0;
+
+for (let mark of marks) {
+    sum += mark;
+}
+
+let avg = sum / marks.length;
+console.log(`Avg marks of the class = ${avg}`);
+
+//----------------------------------------------------------------------------------------------------------
+
+
+// Problem : For a given array with prices of 5 items -> [250, 645, 300, 900, 50]. All items have an offer of 10% OFF on them. Change the array to store final price after applying offer.
+// here we have to use (for loop) , we can not use (for ... of) loop here. cause we have to find the index / position of this array
+
+
+// we can also use this loop (for .. of)
+
+let items = [250, 645, 300, 900, 50];
+let i = 0;
+for (let value of items) {
+    //console.log(`value of index ${i} = ${value}`);
+    let offer = value / 10;
+    items[i] = items[i] - offer;
+    console.log(`value after offer = ${items[i]}`);
+    i++;
+}
+
+
+// we can also use this loop (for)
+let items = [250, 645, 300, 900, 50];
+for (let i = 0; i < items.length; i++){
+    let offer = items[i] / 10;
+    items[i] -= offer;
+}
+console.log(items);
+
+// ----------------------------------------------------------------------------------------------------------
+
+// Problem: create a function using the "function" keyword that takes a String as an argument & returns the number of vowels in the string
+function countVowels(str) {
+    let count = 0;
+    for (const char of str) {
+        if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+            count++;
+        }   
+    }
+    return count;
+}
+countVowels('function');
+
+
+// ----------------------------------------------------------------------------------------------------------
+
+// problem : create an arrow function to perform the same task
+const countVowels = (str) => {
+    let count = 0;
+    for (const char of str) {
+        if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+            count++;
+        }   
+    }
+    return count;
+}
+countVowels('function');
+
+
+
+// /----------------------------------------------------------------------------------------------------------
+// Problem : For a given array of numbers, print the square of each value using the forEach loop. (Print square of given each numbers)
+
+let numbers = [2, 3, 4, 5, 6];
+numbers.forEach((num) => {
+    console.log(num * num);
+})
+
+
+// ------------------------------- using arrow function => --------------------------------------
+let nums = [67, 52, 39];
+let calcSquare = (num) => {
+    console.log(num * num);
+}
+nums.forEach(calcSquare);
+
+
+// ----------------------------------------------------------------------------------------------------------
+// create a new array with map and multiply values with 2
+let nums = [1, 2, 3, 4, 5];
+let newArr = nums.map((val) => {
+    // return val;
+    return val * 2;
+});
+console.log(newArr);
+
+
+// ----------------------------------------------------------------------------------------------------------
+// Searching even values using filter
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+let evenArr = arr.filter((val) => {
+    return val % 2 === 0;
+});
+console.log(evenArr);
+
+// ---------------------------------------------------
+// Searching even values using filter
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+let evenArr = arr.filter((val) => {
+    return val % 2 !== 0;
+});
+console.log(evenArr);
+
+// ----------------------------------------------------------------------------------------------------------
+// we want value that is greater than three
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+let evenArr = arr.filter((val) => {
+    return val > 3;
+});
+console.log(evenArr);
+
+
+// ----------------------------------------------------------------------------------------------------------
+// calculate sum using reduce method
+let arr = [1, 2, 3, 4];
+const output = arr.reduce((res, curr) => {
+    return res + curr;
+});
+console.log(output);
+// ----------------------------------------------------------------------------------------------------------
+// find a largest number using reduce method
+let arr = [5, 6, 2, 1, 3];
+const output = arr.reduce((prev, curr) => {
+    return prev > curr ? prev : curr;
+});
+console.log(output);
+
+
+// ----------------------------------------------------------------------------------------------------------
+// find a smallest number using reduce method
+let arr = [5, 6, 2, 1, 3];
+const output = arr.reduce((prev, curr) => {
+    return prev < curr ? prev : curr;
+});
+console.log(output);
+
+// ----------------------------------------------------------------------------------------------------------
+
+// we are given array of marks of students. Filterour of the marks of students that scored 90+.
+let marks = [97, 64, 32, 49, 99, 96, 86];
+
+let greaterMarks = marks.filter((val) => {
+    return val > 90;
+});
+console.log(greaterMarks);
+
+
+//  ----------------------------------------------------------------------------------------------------------
+// Question: Take a number n as input from user. Create an array of numbers from 1 to n. Use the reduce method to calculate sum of all numbers in the array.
+
+let n = prompt("enter a number : ");
+let arr = [];
+for (let i = 1; i <= n; i++){
+    arr[i - 1] = 1; //1(0){1 , 0 index}, 2(1){2, 1 index}, 3(2){3, 2 index}, 4(3){4, 3 index e add hobe}
+}
+console.log(arr);
+
+//  -- use the reduce method to calculate sum of all numbers in the array.
+let sum = arr.reduce((res, curr) => {
+    return res + curr;
+});
+console.log("sum = ", sum);
+
+//  -- use the reduce method to calculate product of all numbers in the array. (if 4 numbers => 1 * 2 * 3 * 4 => result) (factorial of n)
+let factorial = arr.reduce((res, curr) => {
+    return res * curr;
+});
+console.log("factorial = ", factorial);

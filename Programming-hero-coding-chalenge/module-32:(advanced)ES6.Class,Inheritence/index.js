@@ -38,7 +38,7 @@ method. Then compare the output of question 2 & question 3.
 
 let arrayNumber = [33, 50, 79, 78, 90, 101, 30];
 let findNumbers = arrayNumber.find(number => number % 10 === 0);
-console.log(filterNumber);
+console.log(findNumbers);
 
 
 /*

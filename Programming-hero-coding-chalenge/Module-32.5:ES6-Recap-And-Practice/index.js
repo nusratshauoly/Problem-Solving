@@ -42,12 +42,12 @@ console.log(secondarySchool);
 //  2D Array count korte hoy [row number][column number]
 function highestRunScorer(playersInfo) {
     // console.log(playersInfo);
-    let highestScorer = playersInfo[0][0];
-    let highestScorer = playersInfo[0][1];
+    let highestScorer = playersInfo[0][0];  // highest scorer k dhore nilam row is 0, column is 0
+    let highestScore = playersInfo[0][1];
 
-    for (let x = 1; x < playersInfo.info; x++){
-        if (highestScorer < playersInfo[x][1]) { //ekhane row always 0 index & column always 1 index e thakbe.
-            highestScorer = playersInfo[x][1];
+    for (let x = 1; x < playersInfo.length; x++){  // index 1 theke check korbo largest value tai x = 1 dhorechi.
+        if (highestScore < playersInfo[x][1]) { //ekhane row always 0 index & column always 1 index e thakbe thake cause number count er shomoy only row ta change hochhe r column ta same e ache tai
+            highestScore = playersInfo[x][1];
             highestScorer = playersInfo[x][0];
         }
     }

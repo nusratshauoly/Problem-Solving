@@ -1,4 +1,4 @@
-//19.3
+//18.3
 
 // while condition
 //1.loop variable
@@ -33,7 +33,7 @@ while(number <= 10){
    number = number + 2;
 }
 
-// 19.4: 
+// 18.4: 
 
 // 1 to 100 all odd number
 var number = 1;
@@ -69,7 +69,7 @@ for(var i = 1; i <= 20; i+=2){
     console.log(i);
 }
 
-// 19.5: run a loop for each element
+// 18.5: run a loop for each element
 
 // target: display every elements of an array using for loop
 var numbers = [45, 87, 89, 56, 32, 51, 25, 51, 32];
@@ -86,7 +86,7 @@ for(var i = 0; i < items.length; i++){
     console.log(item);
 }
 
-// 19.6: break and continue
+// 18.6: break and continue
 // break condition using for loop
 for(var i = 0; i <= 20; i++){
     console.log(i);
@@ -138,7 +138,7 @@ for(var i = 0; i < numbers.length; i++){ //array te jokhon  ashbe tokhon e conti
 }
 
 
-// 19.7 for and while loop in a reverse way
+// 18.7 for and while loop in a reverse way
 
 // while inverse way
 var num = 1;

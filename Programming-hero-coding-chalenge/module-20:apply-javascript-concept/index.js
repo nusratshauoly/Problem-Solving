@@ -475,17 +475,23 @@ In the example usage, we calculate the factorial of the number 5 and log the res
 
 
 // factorial while in a reverse way
-function factorial(number){
-   let i = number;
-   let result = 1;
-   while(i >= 1){
-       result = result * i;
-       i--;
+function reverseFactorial(number) {
+    let result = number;
+    let i = 2;
+    while (result > 1) {
+        if (result % i !== 0) {
+            return "No reverse factorial found";
+        }
+        result /= i;
+        i++;
     }
-    return result;
+    return i - 1;
 }
-const output = factorial(7);
+
+const number = 120;
+const output = reverseFactorial(number);
 console.log(output);
+  // Output: 5
 
 ///////////////////////////////
 

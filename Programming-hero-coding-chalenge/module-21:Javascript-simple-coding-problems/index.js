@@ -71,20 +71,25 @@ console.log('area of triangle', ractangleValues);
 
 function secondLargest(arr) {
     let max1st = arr[0];
-    let max2nd = 0;
+    let max2nd = Number.MIN_SAFE_INTEGER;
 
-    for (let i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max1st) {
+        // If the current element is greater than max1st,
+        // update max2nd and max1st accordingly.
             max2nd = max1st;
             max1st = arr[i];
-        }
-        else if (arr[i] > max2nd && arr[i] != max1st) {
+        } else if (arr[i] > max2nd && arr[i] !== max1st) {
+        // If the current element is greater than max2nd
+        // and not equal to max1st, update max2nd.
             max2nd = arr[i];
         }
     }
+
     return max2nd;
 }
-console.log(secondLargest([100,2,4,54,27,98,99]));
+
+console.log(secondLargest([100, 2, 4, 54, 27, 98, 99]));
 
 
 // module regular video lecture problem
@@ -406,19 +411,24 @@ const reversed = reverseString(myString);
 console.log('reversed output: ', reversed);
 
 // words reverse
-function reverseWords(str){
-   const words = str.split(' ');
-   const result = [];
-   //console.log(words);
-   // ['I', 'am', 'a', 'good', 'boy'] {ei word take reverse korbo}
-   for(let i = words.length - 1; i >= 0; i--){
-       const element = words[i];
-       result.push(element);
-   }  
-//    console.log(result); 
-const reversed = result.join(' ');
-return reversed; 
+function reverseWords(str) {
+    const words = str.split(' ');
+    const result = [];
+
+    for (let i = words.length - 1; i >= 0; i--) {
+        const word = words[i];
+        const reversedWord = reverseString(word);
+        result.push(reversedWord);
+    }
+
+    const reversed = result.join(' ');
+    return reversed;
 }
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
 const myString = 'I am a good boy';
 console.log(reverseWords(myString));
 
@@ -515,7 +525,7 @@ function countVowels(str) {
     }
     return count;
 }
-countVowels('function');
+console.log(countVowels('function'));
 
 
 // ----------------------------------------------------------------------------------------------------------
@@ -530,7 +540,7 @@ const countVowels = (str) => {
     }
     return count;
 }
-countVowels('function');
+console.log(countVowels('function'));
 
 
 
@@ -571,7 +581,7 @@ let evenArr = arr.filter((val) => {
 console.log(evenArr);
 
 // ---------------------------------------------------
-// Searching even values using filter
+// Searching odd values using filter
 let arr = [1, 2, 3, 4, 5, 6, 7];
 
 let evenArr = arr.filter((val) => {

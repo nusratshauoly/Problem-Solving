@@ -3,6 +3,21 @@
 Write a function. It will take three parameters. These three parameters will be the lengths of the three sides of a triangle. Now your task is to calculate the area of the triangle by doing some calculations inside the function. If the length of three sides of a triangle is given 
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function calculateTriangleArea(side1, side2, side3) {
   // Check if the given lengths form a valid triangle
   if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
@@ -10,19 +25,19 @@ function calculateTriangleArea(side1, side2, side3) {
   }
 
   // Calculate the semi-perimeter of the triangle
-  var semiperimeter = (side1 + side2 + side3) / 2;
+  let semiperimeter = (side1 + side2 + side3) / 2;
 
   // Calculate the area using Heron's formula
-  var area = Math.sqrt(semiperimeter * (semiperimeter - side1) * (semiperimeter - side2) * (semiperimeter - side3));
+  let area = Math.sqrt(semiperimeter * (semiperimeter - side1) * (semiperimeter - side2) * (semiperimeter - side3));
 
   return area;
 }
 // Example usage
-var side1 = 5;
-var side2 = 6;
-var side3 = 7;
+let side1 = 5;
+let side2 = 6;
+let side3 = 7;
 
-var area = calculateTriangleArea(side1, side2, side3);
+let area = calculateTriangleArea(side1, side2, side3);
 console.log("The area of the triangle is:", area);
 
 /*
@@ -245,7 +260,6 @@ for(let i = 0; i <= 50; i++){
 
 // Module-23-6: Find the cheapest phone from an array of phone objects
 
- // Module-23-6: Find the cheapest phone from an array of phone objects
 
     //2. amra age compare kortam number er shathe 
     //[45, 21, 6, 98, 56];

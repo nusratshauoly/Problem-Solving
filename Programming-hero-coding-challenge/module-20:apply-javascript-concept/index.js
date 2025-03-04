@@ -51,6 +51,20 @@ let leapYears = findLeapYear(years);
 console.log('leap years:', leapYears);
 
 
+// ----------------- using forEach ------------------
+function findLeapYear(years) {
+  let leapYears = [];
+  years.forEach(year => {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+      leapYears.push(year);
+    }
+  });
+  return leapYears;
+}
+let years = [2023, 2024, 2025, 2028, 2030];
+let leapYears = findLeapYear(years);
+console.log('leap years:', leapYears);
+
 
 
 /* 14. Write a function findOddSum() that will take the array [5, 7, 8, 45, 30] as the input parameter and will return the sum of the odd numbers.

@@ -4,16 +4,20 @@
 
 
 function minInArray(numbers) {
-    let lowest = numbers[0];
+    let lowest = numbers[0]; // Assume the first element of the array is the lowest
 
+    // Loop through the array starting from the second element (index 1)
     for (let i = 0; i < numbers.length; i++){
         
+        // Get the current element
         const element = numbers[i];
         
+        // If the current element is smaller than the current lowest, update lowest
         if (element < lowest) {
             lowest = element;
         }
     }
+    // Return the smallest number found in the array
     return lowest;
 }
 const heights = [167, 190, 120, 165, 137];
@@ -61,7 +65,7 @@ function rectangle(length, height) {
     return area;
 }
 let rectangleValues = rectangle(8, 6);
-console.log('area of triangle', ractangleValues);
+console.log('area of triangle', rectangleValues);
 
 
 /////////////////////////////////////////////////////////
@@ -70,26 +74,31 @@ console.log('area of triangle', ractangleValues);
 //An array contains many numbers. Write a program to find the second largest number from those numbers. Search Google if necessary. Then look at the search results and try to understand.
 
 function secondLargest(arr) {
+    // Initialize the largest element to the first element of the array.
     let max1st = arr[0];
+    // Initialize the second largest element to the smallest safe integer.
+    // This ensures that any element in the array will initially be greater than it.
     let max2nd = Number.MIN_SAFE_INTEGER;
-
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max1st) {
         // If the current element is greater than max1st,
         // update max2nd and max1st accordingly.
             max2nd = max1st;
+            // The current element becomes the new largest element.
             max1st = arr[i];
-        } else if (arr[i] > max2nd && arr[i] !== max1st) {
+        } 
+        // Otherwise, if the current element is greater than the current second largest element
+        // and is not equal to the current largest element:
+        else if (arr[i] > max2nd && arr[i] !== max1st) {
         // If the current element is greater than max2nd
         // and not equal to max1st, update max2nd.
             max2nd = arr[i];
         }
     }
-
+    // Return the second largest element.
     return max2nd;
 }
-
-console.log(secondLargest([100, 2, 4, 54, 27, 98, 99]));
+console.log(secondLargest([100, 2, 4, 54, 27, 98, 99]));  // Output: 99
 
 
 // module regular video lecture problem
@@ -177,8 +186,8 @@ else{
 
 // 2. second approach
 
-Math.max(84 99 77);
-Math.min(69 97 99);
+Math.max(84, 99, 77);
+Math.min(69, 97, 99);
 //Math.min(69 97 99);
 
 
@@ -247,9 +256,9 @@ else {
 
 // 1. who is the tallest?
 /*
-Tom and his friends are participating in the 'who is the tallest?" competition. As per the name, the peson with the highest height will be the winner. can you find who is the tallest among tom and all of his friends?
+Tom and his friends are participating in the 'who is the tallest?" competition. As per the name, the person with the highest height will be the winner. can you find who is the tallest among tom and all of his friends?
 
-Input: The input line can have multiple integer numbers, xi(the height of ith friend in cm).
+Input: The input line can have multiple integer numbers, x(the height of ith friend in cm).
     
 Output: Print the height of the tallest friend(cm).
 
@@ -260,12 +269,11 @@ Sample Input-2: 167, 190, 120, 165, 137  |  Sample Output-2: 190
 
 
 function maxInArray(numbers){
-    //console.log('array inside the array', numbers);
  //   5.1: compare er jonno largest variable set kore (numbers er first value k largest dhorlam and array te rakhlam)
     let largest = numbers[0];
- // 1. array er value gulor length onujayi for loop chalabo (i e let disi karon i er man loop cholar shomoy each time change hobe)
+ // 1. array er value gulor length onujayi for loop chalabo
     for(let i = 0; i < numbers.length; i++){
-     // 2. then we will get the value index of the array (index e const disi karon value gulor index er positionfixed thakbe cause amra onno value reassign kortesi na)
+     // 2. then we will get the value index of the array (index e const disi karon value gulor index er position fixed thakbe cause amra onno value reassign kortesi na)
        const index = i;
      // 3. numbers array te value er index gulo boshabo 
        const element = numbers[index];
@@ -310,7 +318,7 @@ function maxInArray(numbers){
 
 
 
- //***** */ HomeWork1: wrie a function to get the lowest number in ana array.
+ //***** */ HomeWork1: write a function to get the lowest number in ana array.
 
 function minInArray(numbers) {
     let lowest = numbers[0];
@@ -338,8 +346,6 @@ console.log('shortest number is: ', shortest);
 
 // string reverse (character reverse)
 
-// str[0], str[1] => evabe string er vitor element gulo ber kora jay. , string er length ber kora jay => str.length 
-
 function reverseString(text){
     // 0. it is for normal string
     //for(let i = 0; i < text.length; i++){
@@ -362,7 +368,30 @@ const reversed = reverseString(myString);
 console.log('reversed output: ', reversed);
 
 
-///////////////
+// --------------------- full code ---------------------------
+function reverseString(text) {
+    let reversed = '';
+    for (let i = text.length - 1; i >= 0; i--) { 
+      const element = text[i];
+      reversed += element; // Equivalent to reversed = reversed + element
+      console.log(element, reversed); // Debugging line
+    }
+    return reversed;
+  }
+  const myString = 'I am a good boy';
+  const reversed = reverseString(myString);
+  console.log('reversed output: ', reversed);
+
+// ----------------------- another form of reverse string -------------
+function reverseString(text) {
+    return text.split('').reverse().join('');
+  }
+
+  const myString = 'I am a good boy';
+  const reversed = reverseString(myString);
+  console.log('reversed output: ', reversed);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // words reverse
@@ -389,49 +418,84 @@ const reversedWords = reverseWords(myString);
 console.log(reversedWords);
 
 
-// ///full code//////
-
- // string reverse
-
-// str[0], str[1] => evabe string er vitor element gulo ber kora jay. , string er length ber kora jay => str.length 
-
-function reverseString(text){
-    // 0. it is for normal string
-    //for(let i = 0; i < text.length; i++){
-   let reversed = '';
-   for(let i = text.length - 1; i >= 0; i--){   
-       const element = text[i];
-       reversed = reversed + element;
-       console.log(element, reversed);
-   }
-   return reversed;
-}
-const myString = 'I am a good boy';
-const reversed = reverseString(myString);
-console.log('reversed output: ', reversed);
-
-// words reverse
+// --------------------- full code ---------------------------
 function reverseWords(str) {
     const words = str.split(' ');
     const result = [];
-
     for (let i = words.length - 1; i >= 0; i--) {
-        const word = words[i];
-        const reversedWord = reverseString(word);
-        result.push(reversedWord);
-    }
-
+      const element = words[i];
+      result.push(element);
+    }  
     const reversed = result.join(' ');
-    return reversed;
-}
+    return reversed; 
+  }
+  const myString = 'I am a good boy';
+  const reversedWords = reverseWords(myString);
+  console.log(reversedWords);
 
-function reverseString(str) {
-    return str.split('').reverse().join('');
-}
+// -------------------- another form of reverse word -----------------------------
+function reverseWords(str) {
+    return str.split(' ').reverse().join(' ');
+  }
+  const myString = 'I am a good boy';
+  const reversedWords = reverseWords(myString);
+  console.log(reversedWords);
 
-const myString = 'I am a good boy';
-console.log(reverseWords(myString));
+/*
+Explanation:
+str.split('') → Converts the string into an array of characters.
+.reverse() → Reverses the order of characters in the array.
+.join('') → Joins the characters back into a string.
+*/
 
+// ///----------------------------- full code ----------------------------------- //////
+
+ // ---------------------------- string reverse ------------------------------
+
+// str[0], str[1] => evabe string er vitor element gulo ber kora jay. , string er length ber kora jay => str.length 
+
+
+function reverseString(text) {
+    let reversed = ''; // Start with an empty string to build the reversed result
+  
+    // Loop from the END of the text to the START (reverse order)
+    for (let i = text.length - 1; i >= 0; i--) {   
+      const element = text[i]; // Get the character at position i
+      reversed = reversed + element; // Add the character to the reversed string
+      console.log(element, reversed); // Debug: Show progress
+    }
+  
+    return reversed; // Return the fully reversed string
+  }
+
+ // For character reversal
+const input1 = 'I am a good boy';
+const reversedChars = reverseString(input1);
+console.log(reversedChars);
+
+// ------------ ------------------------------------- words reverse ------------------------------------------
+
+function reverseWords(str) {
+    // Split the input string into an array of words using spaces
+    const words = str.split(' '); // Example: ["I", "am", "a", "good", "boy"]
+  
+    const result = []; // Array to store reversed words
+  
+    // Loop through the words array in reverse order
+    for (let i = words.length - 1; i >= 0; i--) {
+      const element = words[i]; // Get the word at position i
+      result.push(element); // Add the word to the result array
+    }  
+  
+    // Join the reversed words back into a single string with spaces
+    const reversed = result.join(' '); 
+    return reversed; 
+  }
+
+// For word reversal
+const input2 = 'I am a good boy';
+const reversedWords = reverseWords(input2);
+console.log(reversedWords);
 
 
 /////////////////////////////////////-----------------------------------------------------
@@ -503,6 +567,8 @@ for (let value of items) {
     console.log(`value after offer = ${items[i]}`);
     i++;
 }
+
+// ------------------------------------------------------------------
 
 
 // we can also use this loop (for)
@@ -625,7 +691,7 @@ console.log(output);
 
 // ----------------------------------------------------------------------------------------------------------
 
-// we are given array of marks of students. Filterour of the marks of students that scored 90+.
+// we are given array of marks of students. Filterout of the marks of students that scored 90+.
 let marks = [97, 64, 32, 49, 99, 96, 86];
 
 let greaterMarks = marks.filter((val) => {

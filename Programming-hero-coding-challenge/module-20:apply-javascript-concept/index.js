@@ -65,7 +65,13 @@ let years = [2023, 2024, 2025, 2028, 2030];
 let leapYears = findLeapYear(years);
 console.log('leap years:', leapYears);
 
-
+// ------------------- using filter ---------------------
+function findLeapYear(years) {
+  return years.filter(year => (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
+}
+let years = [2023, 2024, 2025, 2028, 2030];
+let leapYears = findLeapYear(years);
+console.log('leap years:', leapYears);
 
 /* 14. Write a function findOddSum() that will take the array [5, 7, 8, 45, 30] as the input parameter and will return the sum of the odd numbers.
 ২. তোমার বয়স কি odd নাকি even সংখ্যা সেটা চেক কর একটা ফাংশন দিয়ে। সেই ফাংশনকে কোন সংখ্যা প্যারামিটার হিসেবে দিলে, সেই সংখ্যা Even হলে ফাংশন true রিটার্ন করবে আর Odd হলে false রিটার্ন করবে।
@@ -98,7 +104,6 @@ function findOddSum(numbers) {
   return sum;
 }
 
-// Example usage
 const numbers = [5, 7, 8, 45, 30];
 const oddSum = findOddSum(numbers);
 console.log("Sum of odd numbers:", oddSum);
@@ -212,7 +217,7 @@ console.log('Her year:', isHerYearLeapYear);
 
 // another way
 
-//  jodi wkhane ans true hoy tahole r porer line gulote jabena or jodi false hoy tahole (if-else) condition evebeo likha jay
+//  jodi ekhane ans true hoy tahole r porer line gulote jabena or jodi false hoy tahole (if-else) condition evebeo likha jay
 
 function isLeapYear(year){
     const remainder = year % 4;
@@ -240,7 +245,7 @@ console.log('Her year:', isHerYearLeapYear);
 // sum of all numbers
 function findOfSum(numbers){
     // 2.(i) condition er bahire sum er kaj korbo (jokhon konokichu add korbo tokhon er primary value hobe 0 cause ekhono add korinai)
-    let sum = 0; // sum jodi for ondition er vitore declare kori then each time new line e add korte hobe 0 er shathe ager addition er value hariye jabe jodi kothao store kore na rakhi that' why sum for loop er bahire declare korbo.
+    let sum = 0; // sum jodi for condition er vitore declare kori then each time new line e add korte hobe 0 er shathe ager addition er value hariye jabe jodi kothao store kore na rakhi that' why sum for loop er bahire declare korbo.
   //console.log(numbers);
   //1. array er each element first e ber korte hobe
    for(let i = 0; i < numbers.length; i++){
@@ -359,13 +364,13 @@ console.log('odd number sum', oddNumberSum);
 //////////////////////////////////////////
 
 //10. Calculate Factorial of a number using for loop:
-// adding 1 to 7 numbers: 1 + 2 + 3 + 4 + 5 + 6 + 7
+// ------------------- adding 1 to 7 numbers: 1 + 2 + 3 + 4 + 5 + 6 + 7
 let sum = 0;
 for(let i = 1; i <= 7; i++){
     sum = sum + i;
     console.log(i, sum);
 }
-//  using function
+// ------------------- using function
 function sumOfNumbers(number){
     // addition er shomoy initial value always 0 rakhbo.
     let sum = 0;
@@ -376,8 +381,7 @@ function sumOfNumbers(number){
     return sum;
 }
 sumOfNumbers(7);
-// multiplication of numbers
-
+// --------------------- multiplication of numbers
 function multiplicationOfNumbers(number){
     // multiplication er shomoy initial value always 1 rakhbo
    let result = 1;
@@ -409,21 +413,21 @@ console.log('factorial of:',number, fact);
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-//////   using recursion//////////////////
+//////  -------- using recursion -------- //////////////////
 
 /*Certainly! Here's a concise way to calculate the factorial of a number using recursion in JavaScript: */
 
 function factorial(number) {
-  if (number === 0 || number === 1) {
+  if (number === 0 || number === 1) {  // Base case: If number is 0 or 1, return 1 (as 0! and 1! are both 1)
     return 1;
   }
-  
+    // Recursive case: Multiply the current number by the factorial of (number - 1)
   return number * factorial(number - 1);
 }
 
 // Example usage
 const number = 5;
-const factorialOfNumber = factorial(number);
+const factorialOfNumber = factorial(number); // Call the function with the given number
 console.log(`The factorial of ${number} is ${factorialOfNumber}`);
 
 /*
@@ -463,15 +467,16 @@ function factorial(number) {
     return 1;
   }
 
-  let result = 1;
-  let currentNumber = number;
+  let result = 1;  // Variable to store the factorial result
+  let currentNumber = number;  // Start with the given number
 
+   // Loop until currentNumber becomes 1
   while (currentNumber > 1) {
-    result *= currentNumber;
-    currentNumber--;
+    result *= currentNumber; // Multiply result by the current number
+    currentNumber--; // Decrease the current number by 1
   }
 
-  return result;
+  return result;  // Return the calculated factorial
 }
 // Example usage
 const number = 5;
@@ -488,17 +493,41 @@ In the example usage, we calculate the factorial of the number 5 and log the res
 */
 
 
-// factorial while in a reverse way
+// ---------------------- factorial while in a reverse way --------------------
+
+
+/*
+For example: 120 / 2 = 60, 60 / 3 = 20, 20 / 4 = 5, 5 / 5 = 1, so the number that 120 is the factorial of is 5.
+*/
+/*
+Why i - 1?
+The loop increments i++ after each division.
+When result becomes 1, i has already increased once more than needed.
+To get the correct factorial number, we subtract 1.
+Example Execution (120):
+Initial Values → result = 120, i = 2
+120 / 2 = 60 → i = 3
+60 / 3 = 20 → i = 4
+20 / 4 = 5 → i = 5
+5 / 5 = 1 → i = 6
+Loop Stops (since result = 1)
+Return i - 1 → 6 - 1 = 5
+*/
+
 function reverseFactorial(number) {
-    let result = number;
-    let i = 2;
+    let result = number; // Store the input number to perform division operations
+    let i = 2; // Start dividing from 2 since factorials begin from 1! = 1 and 2! = 2
+
+    // Keep dividing the number by increasing integers
     while (result > 1) {
+      // If the number is not divisible by i, it's not a factorial
         if (result % i !== 0) {
             return "No reverse factorial found";
         }
-        result /= i;
-        i++;
+        result /= i; // Divide the number by i
+        i++; // Increment i to check the next factor
     }
+    // Return the last valid factor (subtracting 1 because i was incremented after the last division)
     return i - 1;
 }
 

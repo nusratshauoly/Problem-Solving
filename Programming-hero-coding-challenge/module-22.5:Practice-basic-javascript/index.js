@@ -1,19 +1,15 @@
-
-//প্রব্লেম সলভিং চেকলিস্ট/সেলফ এসেসমেন্ট : 
+//প্রব্লেম সলভিং চেকলিস্ট/সেলফ এসেসমেন্ট :
 /*
 ১. সিম্পল একটা ফাংশন লিখতে হবে। যেটার নাম হবে feetToInch এবং এই ফাংশন ইনপুট হিসেবে নিবে feet আর রিটার্ন করবে inch । অর্থাৎ এই ফাংশনকে কোন একটা ফিট বলে দিলে সে রিটার্ন হিসেবে বলে দিবে কত ইঞ্চি হয়। 
 */
 
-
-function feetToInch(feet){
-   const inch = feet * 12;
-   return inch;
+function feetToInch(feet) {
+  const inch = feet * 12;
+  return inch;
 }
 const dataFeet = 10;
 const dataFeets = feetToInch(dataFeet);
 console.log(dataFeets);
-
-
 
 ///////////////////////////////////////////
 
@@ -22,8 +18,8 @@ console.log(dataFeets);
 .
 */
 function centimeterToMeter(centimeters) {
-   const meter = centimeters / 100;
-   return meter;
+  const meter = centimeters / 100;
+  return meter;
 }
 const centimeter = 1000;
 const centimeterToMeters = centimeterToMeter(centimeter);
@@ -49,7 +45,6 @@ will return the number as the answer. in javascript
 .
 */
 
-
 function paperRequirements(numCopiesBook1, numCopiesBook2, numCopiesBook3) {
   const pagesPerBook = [100, 200, 300];
   let totalPaperRequired = 0;
@@ -67,7 +62,6 @@ const book3Copies = 4;
 
 const totalPaper = paperRequirements(book1Copies, book2Copies, book3Copies);
 console.log("Total paper required:", totalPaper);
-
 
 /*
 Sure! Let's go through the paperRequirements function step by step:
@@ -88,12 +82,7 @@ In the example usage provided, the function is called with book1Copies set to 3,
 
 */
 
-
-
-
-
 ////////////////////////////////////////
-
 
 /*
 ৪. একটা ফাংশন লিখবে। এই ফাংশনের নাম হবে bestFriend তারপর সেই ফাংশনে ইনপুট প্যারামিটার হিসেবে একটা array নিবে। সেই array এর মধ্যে তোমার সব ফ্রেন্ডের নাম থাকবে। এখন তোমার কাজ হচ্ছে যে ফ্রেন্ড এর নাম সবচেয়ে বড় সেই ফ্রেন্ড এর নাম রিটার্ন করে দেয়া। এই ক্ষেত্রে তুমি নামটা অর্থাৎ ফ্রেন্ডের নাম (স্ট্রিং) রিটার্ন করতে হবে। 
@@ -104,20 +93,19 @@ Write a function. The name of this function will be bestFriend then the function
 
 function bestFriend(friends) {
   let largestName = "";
-  
+
   for (let i = 0; i < friends.length; i++) {
     if (friends[i].length > largestName.length) {
       largestName = friends[i];
     }
   }
-  
+
   return largestName;
 }
 
 const friendsList = ["Alice", "Bob", "Charlie", "David", "Eve"];
 const bestFriendName = bestFriend(friendsList);
 console.log("Best Friend:", bestFriendName);
-
 
 /*
 Certainly! Let's break down the bestFriend function step by step:
@@ -136,15 +124,6 @@ Finally, the function returns the value of largestName, which is the name of the
 
 In the example usage provided, the function is called with the friendsList array, which contains the names of your friends. The function iterates through the array, compares the length of each friend's name, and updates the largestName variable accordingly. The resulting friend's name with the longest length is then outputted to the console using console.log.
 */
-
-
-
-
-
-
-
-
-
 
 /////////////////////////////////////////
 
@@ -193,8 +172,6 @@ Finally, the function returns the positiveNumbers array, which contains all the 
 In the provided example usage, the getPositiveNumbers function is called with the numbersArray array. The function iterates through the array, adds positive numbers to the positiveNums array, and stops the loop when a negative number is encountered. The resulting positive numbers are then outputted to the console using console.log.
 
 */
-
-
 
 //////////////////////////////////////////
 /*

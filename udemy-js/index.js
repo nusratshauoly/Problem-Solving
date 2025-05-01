@@ -365,12 +365,10 @@ console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
 
-// vid - 59: Using Google, StackOverflow and MDN
+// ----------   vid - 59: Using Google, StackOverflow and MDN
 
 // PROBLEM 1:
 // We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
-
-const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 // 1) Understanding the problem
 // - What is temp amplitude? Answer: difference between highest and lowest temp
@@ -388,6 +386,8 @@ const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 // - A Pseudo code is simple an informal description of the actual code that we're gonna write. So, it's like code for humans to understand not computers.
 
 // there are no real rules on how to write Pseudo code.
+
+const temperatures = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 
 const calcTempAmplitude = function (temps) {
   let max = temps[0]; //  we start comparing from 0 index element cause we assume the first element of the array is the maximum value.
